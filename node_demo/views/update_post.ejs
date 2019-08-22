@@ -1,0 +1,55 @@
+<%- include('header') -%>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="/update.js"></script>
+    </head>
+<body>
+    <header class="masthead">
+        <div class="overlay"></div>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+                <h1>Update Post</h1>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form action="" method="POST" id="editPostFrm">
+            <input type="hidden" id="resultid" value="<%= result._id %>">
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label>Title</label>
+                <input type="text" name="title" placeholder="Title" class="form-control" value="<%= result.title %>">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label>Description</label>
+                <input type="text" name="description" placeholder="Description" class="form-control" value="<%= result.description %>">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label>Content</label>
+                <textarea name="content" placeholder="Content ..." cols="30" rows="10" class="form-control" value=""><%= result.content %></textarea>
+                </div>
+            </div>
+            <div class="form-group my-4 text-center">
+                <input type ="submit" class="btn btn-primary" id="editPostbtn" value="Edit Post">
+            </div>
+            </form>
+        </div>
+        </div>
+    </div>
+  </body>
+  </html>

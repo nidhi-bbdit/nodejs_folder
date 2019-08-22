@@ -1,0 +1,24 @@
+<%- include('header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+   
+    <h3>Image Uploading....</h3>
+    <form id="imgupload_frm" method="POST" enctype="multipart/form-data" action="/imageUploads">
+        <div class="form-group row"></div>
+            <input type="file" name="image">
+        </div>
+        <br/><br/>
+        <div class="form-group row">
+                <input type="submit" class="btn btn-primary" value="Upload" id="imgupload">
+        </div>
+    </form>
+</body>
+</html>
+

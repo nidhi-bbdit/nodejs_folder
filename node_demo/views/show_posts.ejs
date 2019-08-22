@@ -1,0 +1,36 @@
+<%- include('header') -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>All Posts</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/delete.js"></script>
+  <script src="/update.js"></script>
+</head>
+<body>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Content</th>
+            <th scope="col">Action</th>
+            
+            </tr>
+        </thead>
+            <tbody>
+            <% if(result){
+                result.forEach(function(el, index){ %>
+                <tr>
+                <th scope="row"><%= el.title %></th>
+                <td><%= el.description %></td>
+                <td><%= el.content %></td>
+                <td><input type ="button" class="edit" value="EDIT" data-id="<%= el._id %>"> &nbsp;&nbsp;&nbsp;&nbsp;<input type ="button" class= "delete" value="DELETE" data-id="<%= el._id %>"></td>
+                </tr>
+                <%  }) 
+            }  %>
+         </tbody>
+    </table>
+</body>
+</html>

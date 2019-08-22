@@ -1,7 +1,31 @@
 <%- include('header') -%>
-<h1>
-  <%= title %>
-</h1>
-<p>
-    <%= page %>
-</p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+ /* background-image: url("https://images.pexels.com/photos/1227520/pexels-photo-1227520.jpeg");*/
+  background-image: url("/images/backgroundimage.jpeg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<h1 style ="color:black; text-align : center;">Start your blog now.</h1>
+<div class="bg"></div>
+</body>
+</html>
